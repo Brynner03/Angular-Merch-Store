@@ -65,7 +65,7 @@ export class CartComponent implements OnInit {
   }
 
   onCheckout(): void {
-    this.http.post('http://localhost:4242/checkout', {
+    this.http.post('http://https://merch-store-api.onrender.com/checkout', {
       items: this.cart.items
     }).subscribe(async(res: any) => {
       let stripe = await loadStripe('pk_test_51OSoflCHoohSjYT3XexNtDCTk4vImHI2WgQFyGHes3VMkBWbdu24WSjm349fA2QI7vcISm7oaai1kfk41jiIJMTN0016rO0tGF');
